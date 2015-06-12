@@ -9,7 +9,7 @@ download [ca-bundle.crt](http://curl.haxx.se/ca/ca-bundle.crt) in the lib/ direc
 
 create fix_ssl.rb in app/config/initializers/
 
-#app/config/initializers/fix_ssl.rb
+```
 require 'open-uri'
 require 'net/https'
 
@@ -24,5 +24,6 @@ module Net
     end
   end
 end
+```
 
 restart rails server
