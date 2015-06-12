@@ -1,0 +1,12 @@
+<h1>Search flickr with id</h1>
+
+<%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :flickr_id %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<h3>flickr id: <%= @flickr_id %></h3>
+
+<% cache ("flickr_sidebar") do %>
+  <%= render_flickr_sidebar_widget(@flickr_id) %>
+<% end %>
